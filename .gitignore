@@ -1,0 +1,7 @@
+config.json
+HANDOVER.md
+.env
+.env.*
+__pycache__/
+*.py[cod]
+.DS_Store
