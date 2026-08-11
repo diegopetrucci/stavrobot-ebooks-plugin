@@ -1,0 +1,15 @@
+{
+  "name": "request_book",
+  "description": "Idempotently request one explicitly selected ebook in Bookshelf using its signed request_token. The request is returned with a durable request_id, status requested/searching, terminal false, and a 300-second check suggestion. To follow up, offer exactly one recurring manage_cron entry that calls ebooks/check_book_request with this request_id; cron replies are not auto-delivered, so explicitly call send_telegram_message with the outcome. When terminal is true or 48 hours have elapsed, notify the user and delete that cron entry.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "request_token": {
+      "type": "string",
+      "description": "Required opaque signed token returned for the exact user-selected search candidate. Never substitute candidate_id, title, or author."
+    },
+    "search_now": {
+      "type": "boolean",
+      "description": "Whether Bookshelf should start an immediate bounded BookSearch where supported (default true)."
+    }
+  }
+}

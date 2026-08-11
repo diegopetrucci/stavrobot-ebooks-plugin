@@ -1,0 +1,8 @@
+{
+  "bookshelf_url": "http://host.docker.internal:8787",
+  "bookshelf_api_key": "REPLACE_WITH_BOOKSHELF_API_KEY",
+  "root_folder_name": "Bookshelf Sandbox",
+  "quality_profile_name": "eBook",
+  "metadata_profile_name": "Standard",
+  "http_timeout_seconds": 15
+}

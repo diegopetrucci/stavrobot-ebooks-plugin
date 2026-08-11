@@ -1,0 +1,11 @@
+{
+  "name": "books_status",
+  "description": "Check Bookshelf (Readarr fork) reachability, authentication, and configuration health. Resolves the configured root folder, quality profile, and metadata profile by name and verifies each resolves to exactly one record (0 or more than 1 is reported as configuration_error). Reports an overall status of ok, degraded (reachable but misconfigured), or unavailable (unreachable or auth failure). Use this tool to diagnose Bookshelf connectivity and configuration issues before searching or requesting books.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "metadata_check": {
+      "type": "boolean",
+      "description": "When true, performs a read-only book lookup probe to test the Bookshelf metadata service. A 200 OK with an empty result list is ambiguous — it may indicate the upstream metadata service is unavailable rather than no match. The result is reported as a heuristic and does not affect the overall status."
+    }
+  }
+}

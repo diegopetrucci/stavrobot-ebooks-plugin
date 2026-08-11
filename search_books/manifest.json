@@ -1,0 +1,15 @@
+{
+  "name": "search_books",
+  "description": "Search Bookshelf's ebook metadata and display selectable candidates. Each candidate includes a short-lived request_token bound to the exact verified book and original query; pass only that request_token to request_book, never candidate_id. If no candidates are returned, relay the ambiguity honestly: metadata search may be temporarily unavailable, so advise retrying in a few minutes. Never automatically select one; always present candidates and require an explicit user choice before request_book.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "query": {
+      "type": "string",
+      "description": "Required book title or author query (trimmed, maximum 200 characters)."
+    },
+    "limit": {
+      "type": "integer",
+      "description": "Maximum number of candidates to display (default 5, minimum 1, maximum 10)."
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "ebooks",
+  "description": "Search, check, and request ebooks through Bookshelf (a Readarr fork). Supports looking up books, adding idempotent ebook requests to Bookshelf, and tracking acquisition and import status.",
+  "instructions": "User setup: 1) In Bookshelf, open Settings > General and copy the API key; keep it secret. 2) Set bookshelf_url to http://host.docker.internal:8787 when Bookshelf is on the host reachable from the plugin runner. 3) Set bookshelf_api_key to that key. 4) Optional names default to root_folder_name=Bookshelf Sandbox, quality_profile_name=eBook, and metadata_profile_name=Standard; change them only when your Bookshelf names differ. 5) Leave http_timeout_seconds at 15 unless needed, then run books_status.",
+  "config": {
+    "bookshelf_url": {
+      "description": "Bookshelf base URL (e.g. http://host.docker.internal:8787). Must be reachable from the plugin runner.",
+      "required": true
+    },
+    "bookshelf_api_key": {
+      "description": "Bookshelf API key from Settings > General or config.xml. Never share or log this value.",
+      "required": true
+    },
+    "root_folder_name": {
+      "description": "Name of the Bookshelf root folder used when adding new authors.",
+      "required": false,
+      "default": "Bookshelf Sandbox"
+    },
+    "quality_profile_name": {
+      "description": "Name of the Bookshelf quality profile used when adding new authors (e.g. eBook).",
+      "required": false,
+      "default": "eBook"
+    },
+    "metadata_profile_name": {
+      "description": "Name of the Bookshelf metadata profile used when adding new authors.",
+      "required": false,
+      "default": "Standard"
+    },
+    "http_timeout_seconds": {
+      "description": "Per-request Bookshelf HTTP timeout in seconds (greater than 0 and at most 120).",
+      "required": false,
+      "default": 15
+    }
+  }
+}

@@ -1,7 +1,12 @@
 config.json
 HANDOVER.md
+AUDIOBOOK-STACK-DIAGNOSIS.md
+.tickets/
 .env
 .env.*
 __pycache__/
 *.py[cod]
 .DS_Store
+.venv/
+uv.lock
+.pytest_cache/
