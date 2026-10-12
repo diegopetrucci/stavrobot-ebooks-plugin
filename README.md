@@ -1,6 +1,6 @@
 # stavrobot-ebooks-plugin
 
-`stavrobot-ebooks-plugin` is the `ebooks` plugin for [Stavrobot](https://github.com/skorokithakis/stavrobot). It searches Bookshelf ebook metadata, requests an explicitly selected ebook, and reports read-only acquisition status. The plugin is ebook-only: audiobook acquisition needs a second Bookshelf instance; see the local diagnosis note for context.
+`stavrobot-ebooks-plugin` is the `ebooks` plugin for [Stavrobot](https://github.com/skorokithakis/stavrobot). It searches Bookshelf ebook metadata, requests an explicitly selected ebook, and reports read-only acquisition status. The plugin is ebook-only.
 
 ## Install
 

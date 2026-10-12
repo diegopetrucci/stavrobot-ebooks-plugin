@@ -1,6 +1,6 @@
 {
   "name": "check_book_request",
-  "description": "Read-only status check for one ebook request in Bookshelf. The request_id is the positive integer Bookshelf book ID returned by request_book. Reports imported, downloading, queued, grabbed_stalled, searching, requested, or explicit failed state; Bookshelf import is the ebook terminal signal. Never performs mutations or calls CWA or Audiobookshelf.",
+  "description": "Read-only Bookshelf-only status check for one ebook request. The request_id is the positive integer Bookshelf book ID returned by request_book. Reports imported, downloading, queued, grabbed_stalled, searching, requested, or explicit failed state; Bookshelf import is the ebook terminal signal. Never performs mutations; all checks use Bookshelf.",
   "entrypoint": "run.py",
   "parameters": {
     "request_id": {

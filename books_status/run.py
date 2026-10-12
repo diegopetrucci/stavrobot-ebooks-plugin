@@ -169,7 +169,7 @@ def handle(params: dict[str, Any]) -> dict[str, Any]:
                     'result': 'has_results',
                 }
             else:
-                # 200 OK + empty list is ambiguous — see AUDIOBOOK-STACK-DIAGNOSIS.md
+                # 200 OK + empty list is ambiguous: no matches or an unavailable metadata service.
                 checks['metadata_lookup'] = {
                     'ok': True,
                     'heuristic': (
