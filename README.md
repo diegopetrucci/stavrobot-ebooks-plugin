@@ -2,6 +2,16 @@
 
 `stavrobot-ebooks-plugin` is the `ebooks` plugin for [Stavrobot](https://github.com/skorokithakis/stavrobot). It searches Bookshelf ebook metadata, requests an explicitly selected ebook, and reports read-only acquisition status. The plugin is ebook-only.
 
+## Dependencies and integration boundaries
+
+The plugin directly integrates with the Stavrobot host and the Bookshelf API. It is ebook-only; the following are deployment examples rather than universal plugin requirements:
+
+- Bookshelf metadata may be provided through `rreading-glasses` and Hardcover.
+- Acquisition may use configured indexers and a download client; MyAnonamouse and qBittorrent are examples, not requirements.
+- Calibre-Web Automated (CWA) is an external post-import handoff. The plugin does not call or verify it.
+
+An `imported` result confirms only that Bookshelf imported the requested book. It does not confirm CWA availability or delivery to a device.
+
 ## Install
 
 Install this repository through Stavrobot's git-URL flow:
